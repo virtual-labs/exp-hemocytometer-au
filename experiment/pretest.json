@@ -2,38 +2,47 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. The actively growing part of plant is ------- ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Leaves",
+        "b": "Lateral stem",
+        "c": "Flower bud",
+        "d": "Root tip"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+ 
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+    	 
+    	 
+
+    {
+      "question": "2. ------- root tip is most commonly used for viewing mitosis in labs.",
+      "answers": {
+        "a": "Onion",
+        "b": "Potato",
+        "c": "Tomato",
+        "d": "Cucumber"
       },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+
+    
     {
-      "question": "This is a Sample Question 2?",
+      "question": "3. The term mitosis was first introduced by",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "C. Nageli",
+        "b": "Oscar Hertwig",
+        "c": "Walther Flemming",
+        "d": "W. Waldeyer"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
     }
   ]
-}
+}	 
+	 
