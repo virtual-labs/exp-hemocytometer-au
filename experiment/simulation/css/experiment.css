@@ -1,0 +1,36 @@
+md-radio-button {
+	display: inline;
+}
+.spacer_1
+{
+    padding:0px 80px;
+}
+.spacer_2
+{
+    padding:0px 50px;
+}
+.spacer_3
+{
+    padding:0px 15px;
+}
+.spacer_4
+{
+    padding:0px 35px;
+}
+.spacer_5
+{
+    padding:0px 10px;
+}
+.spacer_6
+{
+    padding:0px 3px;
+}
+table, th , td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: lightgrey;
+}
+#tblMain input {
+	border: none;
+	background-color: white;
+}
