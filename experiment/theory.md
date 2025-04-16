@@ -8,3 +8,6 @@ The glass slide has a rectangular indentation that creates an H-shaped chamber a
 
 To use the hemocytometer, the cover slip is placed on the device, and the chamber is filled with the cell suspension. There is a notch or V-shaped groove at each end of the chamber where the sample is introduced. The liquid is drawn into the chamber by capillary action. The cover glass does not float on the liquid but is held at a precise height. The grid’s arrangement of squares of different sizes allows for easy and systematic counting of cells. Using this method, it is possible to accurately determine the number of cells in a specified volume.
 
+The ruled area of the hemocytometer consists of several large 1 × 1 mm (1 mm²) squares, which are subdivided in three ways: 0.25 × 0.25 mm (0.0625 mm²), 0.25 × 0.20 mm (0.05 mm²), and 0.20 × 0.20 mm (0.04 mm²). The central 1 × 1 mm square, which contains 0.20 × 0.20 mm subdivisions, is further divided into 0.05 × 0.05 mm (0.0025 mm²) squares.
+
+Place the coverslip (0.1 mm thick) on the raised edges of the hemocytometer. This setup defines a specific volume above each square, allowing for accurate cell counting.
