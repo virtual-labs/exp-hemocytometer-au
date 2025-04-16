@@ -2,15 +2,15 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. The actively growing part of plant is ------- ",
+      "question": "1. Hemocytometer was invented by ------",
       "answers": {
-        "a": "Leaves",
-        "b": "Lateral stem",
-        "c": "Flower bud",
-        "d": "Root tip"
+        "a": "Wallace H Coulter",
+        "b": "Bonner Sweet",
+        "c": "Louis Charles Malassez",
+        "d": "Claude Bernard"
       },
  
-      "correctAnswer": "d",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
 
@@ -18,31 +18,32 @@
     	 
 
     {
-      "question": "2. ------- root tip is most commonly used for viewing mitosis in labs.",
+      "question": "2. The central square of hemocytometer is divided into-------- number of squares.",
       "answers": {
-        "a": "Onion",
-        "b": "Potato",
-        "c": "Tomato",
-        "d": "Cucumber"
+        "a": "20",
+        "b": "25",
+        "c": "30",
+        "d": "35"
       },
       
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
 
     
     {
-      "question": "3. The term mitosis was first introduced by",
+      "question": "3. Find the percentage of viable cells, if there is a total of 150 cells including 120 unstained cells.",
       "answers": {
-        "a": "C. Nageli",
-        "b": "Oscar Hertwig",
-        "c": "Walther Flemming",
-        "d": "W. Waldeyer"
+        "a": "80",
+        "b": "65",
+        "c": "70",
+        "d": "75"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
 }	 
+	 
 	 

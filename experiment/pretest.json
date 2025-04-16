@@ -2,45 +2,43 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. The actively growing part of plant is ------- ",
+      "question": "1. Live cells or tissues with intact -------- are not coloured",
       "answers": {
-        "a": "Leaves",
-        "b": "Lateral stem",
-        "c": "Flower bud",
-        "d": "Root tip"
+        "a": "vesicles",
+        "b": "nucleus",
+        "c": "chloroplast",
+        "d": "cell membrane"
       },
  
       "correctAnswer": "d",
       "difficulty": "beginner"
     },
 
-    	 
-    	 
 
     {
-      "question": "2. ------- root tip is most commonly used for viewing mitosis in labs.",
+      "question": "2. The total area of a hemocytometer chamber is -------",
       "answers": {
-        "a": "Onion",
-        "b": "Potato",
-        "c": "Tomato",
-        "d": "Cucumber"
+        "a": "1 mm2",
+        "b": "15 mm2",
+        "c": "16 mm2",
+        "d": "9 mm2"
       },
       
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
 
     
     {
-      "question": "3. The term mitosis was first introduced by",
+      "question": "3. Trypan blue is commonly used in ---------- for cell counting",
       "answers": {
-        "a": "C. Nageli",
-        "b": "Oscar Hertwig",
-        "c": "Walther Flemming",
-        "d": "W. Waldeyer"
+        "a": "microscopy",
+        "b": "analytical chemistry",
+        "c": "spectroscopy",
+        "d": "mass spectrometry"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
