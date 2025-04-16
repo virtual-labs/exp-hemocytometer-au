@@ -1,13 +1,220 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
-
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+<html lang="en" >
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel='stylesheet' href='../template/assets/css/fonts.googleapis.css'>
+    <link rel="stylesheet" href="../template/bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="../template/assets/css/app.css"/>
+    <link rel="stylesheet" href="css/experiment.css"/>
+    <script src="../template/js/createjs-2013.12.12.min.js"></script>
+    <script src="../template/js/easeljs-0.7.0.min.js"></script>
+    <script src="../template/js/canvasjs.min.js"></script>
+    <script src="../template/bower_components/angular/angular.js"></script>
+    <script src="../template/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../template/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../template/bower_components/angular-chart/angular-charts.min.js"></script>
+    <script src="../template/bower_components/angular-fullscreen/angular-fullscreen.js"></script>
+    <script src="../template/js/Gettext.js"></script>
+    <script type="text/javascript" src="../template/bower_components/angular-material/angular-material.js"></script>
+    <script src="../template/js/getlanguage.js"></script>
+    <script src="./src/user_controller.js"></script>
+    <script src="./src/experiment.js"></script>
+    <script type="text/javascript">
+      angular
+      .module('starterApp', ['ngMaterial','users'])
+      .config(function($mdThemingProvider, $mdIconProvider){
+          $mdIconProvider
+              .icon("menu"       , "../template/assets/svg/menu.svg"        , 24)
+              .icon("fullscreen"       , "../template/assets/icons/Icon3.svg", 24)
+              .icon("help"      , "../template/assets/icons/Icon2.svg", 24);
+              $mdThemingProvider.theme('default')
+                  .primaryPalette('blue')
+                  .accentPalette('red');
+      });
+    </script>
+	<script>
+	/** Allows only numbers(0-9) in input text boxes */
+	function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+         return true;
+      }
+	</script>
+  </head>
+  <body style="background-color: #f2f2f2;" ng-app="starterApp" ng-controller="userController as ul">
+    <md-toolbar class="md-toolbar-tools" id="main">
+      <md-button class="md-icon-button" hide-gt-md ng-click="ul.toggleList()" aria-label="Show User List">
+        <md-icon md-svg-icon="menu" ></md-icon>
+      </md-button>
+      <!-- //Experiment title gives here//   -->
+      <h1 flex="" layout="row" class="expTitle" id="expTitle">{{heading}}</h1>
+      <md-button class="md-icon-button" aria-label="help" ng-click="showActionToast()">
+        <md-icon md-svg-icon="help"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="fullscreen" ng-click="goFullscreen()">
+        <md-icon md-svg-icon="fullscreen"></md-icon>
+      </md-button>
+    </md-toolbar>
+    <md-content flex layout="row" style="background-color: #f2f2f2;">
+      <md-content  id="content" layout="column"  style="background-color: #f2f2f2;">
+        <canvas id="demoCanvas" width="700" height="700" align="center" layout-fill experiment></canvas>
+        <div id="Copyright">{{copyright}}</div>
+      </md-content>
+      <md-sidenav class="site-sidenav md-sidenav-left" md-component-id="right" md-is-locked-open="$mdMedia('gt-md')">
+        <div>
+            <md-button id="variables" class="md-raised md-primary toolbarbutton subTitle" ng-click="toggle()">
+                {{variables}}
+			  <!-- //inset toolbar //   -->
+                <span aria-hidden="true">
+                    <md-icon md-svg-src="md-toggle-arrow"  aria-hidden="true" ng-animate="{enter: 'rotate', leave: 'rotateCounterwise'}" ng-class="{true: 'rotate', false: 'rotateCounterwise'}[isActive]" ></md-icon>
+                </span>
+            </md-button>
+			<div ng-hide="showValue" class="div">
+          <!-- //inset button //   -->
+          <section layout="row" layout-align="center center">
+            <md-button class="md-raised" id="startBtn" ng-click="changeViews();" >{{change_view_lbl}}</md-button>
+          </section>
+          <!-- View change dropdown -->
+          <md-content id="selectView" class="md-title selectable" layout-padding>{{selectView_label}}</md-content>
+          <!-- Lense change dropdown -->
+          <!-- Insert dropdown label for Select lense -->
+          <md-content id="selectLense" class="md-title selectable" layout-padding>{{selectLense_label}}</md-content>
+          <!-- Insert dropdown box -->     
+          <md-content class="md-padding" >
+            <md-select aria-label="lenseLbl"  placeholder="{{selectLense_Placeholder}}" ng-model="lense_Mdl" ng-change="changeLense();">
+              <md-option ng-repeat="x in selectLenseArray" value="{{ x.type }}">{{ x.optionsLense }}</md-option>
+            </md-select>
+          </md-content>
+		  <!-- Insert slider label -->
+          <md-content class="md-title selectable" ng-model="sampleVolume" layout-padding id="sampleVolume">
+            {{sample_volume_lbl}}{{sample_vol}}
+          </md-content>
+          <!-- Insert slider -->
+          <div layout>
+            <md-slider flex md-discrete ng-model="sample_volume" step="1" min="1" max="10" aria-label="rating" 
+              ng-change="orginalVolSample();">
+            </md-slider>
+          </div>
+          <!-- Insert radio label -->
+		  <md-content id="no_of_sqre" class="md-title selectable" layout-padding>{{no_of_squares_cnt}}</md-content>
+          <md-radio-group ng-model="d15.tables" ng-change="showTables();" >
+            <md-radio-button value="squareCnt4">4</md-radio-button>
+            <md-radio-button value="squareCnt5">5</md-radio-button>
+          </md-radio-group>
+		  <md-content class="md-title selectable" layout-padding id="spacing"></md-content>
+          <table ng-show="square4" id="tblMain" >
+            <tr>
+              <th></th>
+              <th>{{viable_cell_count}}</th>
+              <th>{{dead_cell_count}}</th>
+            </tr>
+            <tr>
+              <td>{{Square1}}</td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="viable1" ng-model="sqr41_viable" ng-change="test(scope);"></td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="dead1" ng-model="sqr41_dead" ng-change="test(scope);"> </td>
+            </tr>
+            <tr>
+              <td>{{Square2}}</td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="viable2" ng-model="sqr42_viable" ng-change="test(scope);"></td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="dead2" ng-model="sqr42_dead" ng-change="test(scope);"></td>
+            </tr>
+            <tr>
+              <td>{{Square3}}</td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="viable3" ng-model="sqr43_viable" ng-change="test(scope);"></td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="dead3" ng-model="sqr43_dead" ng-change="test(scope);"></td>
+            </tr>
+            <tr>
+              <td>{{Square4}}</td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="viable4" ng-model="sqr44_viable" ng-change="test(scope);"></td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="dead4" ng-model="sqr44_dead" ng-change="test(scope);"></td>
+            </tr>
+            <tr>
+              <td>{{Total}}</td>
+              <td ng-model="totalViable">{{sqr4_viable_total}}</td>
+              <td ng-model="totaldead">{{sqr4_dead_total}}</td>
+            </tr>
+          </table>
+          <table ng-show="square5">
+            <tr>
+              <th></th>
+              <th>{{viable_cell_count}}</th>
+              <th>{{dead_cell_count}}</th>
+            </tr>
+            <tr>
+              <td>{{Square1}}</td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="viabl1" value=0 ng-model="sqr51_viable"  ng-change="square5Calc(scope);"></td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="dead51" value=0 ng-model="sqr51_dead" ng-change="square5Calc(scope);"> </td>
+            </tr>
+            <tr>
+              <td>{{Square2}}</td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="viabl2" value=0 ng-model="sqr52_viable" ng-change="square5Calc(scope);"></td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="dead52" value=0 ng-model="sqr52_dead" ng-change="square5Calc(scope);"></td>
+            </tr>
+            <tr>
+              <td>{{Square3}}</td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="viabl3" value=0 ng-model="sqr53_viable" ng-change="square5Calc(scope);"></td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="dead53" value=0 ng-model="sqr53_dead" ng-change="square5Calc(scope);"></td>
+            </tr>
+            <tr>
+              <td>{{Square4}}</td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="viabl4" value=0 ng-model="sqr54_viable" ng-change="square5Calc(scope);"></td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="dead54" value=0 ng-model="sqr54_dead" ng-change="square5Calc(scope);"></td>
+            </tr>
+            <tr>
+              <td>{{Square5}}</td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="viabl5" value=0 ng-model="sqr55_viable" ng-change="square5Calc(scope);"></td>
+              <td contenteditable='false'><input type="text" onkeypress="return isNumberKey(event)" style="width:100%" name="dead55" value=0 ng-model="sqr55_dead" ng-change="square5Calc(scope);"></td>
+            </tr>
+            <tr>
+              <td>{{Total}}</td>
+              <td ng-model="sqr5totalViable">{{sqr5_viable_total}}</td>
+              <td ng-model="sqr5totalDead">{{sqr5_dead_total}}</td>
+            </tr>
+          </table>
+          <!-- Insert label -->
+          <md-content id="cell_viablty" class="md-title selectable" layout-padding>{{cell_viablty_lbl}}</md-content>
+          <!-- Insert total cell count label -->
+          <md-content class="md-title selectable" ng-model="totCellsLabel" layout-padding id="totalCellsLabel">
+            {{total_cells_lbl}}:<span class="spacer_1">{{total_cells}} </span>
+          </md-content>
+          <!-- Insert percentage cell viability label -->
+          <md-content class="md-title selectable" ng-model="perViableLabel" layout-padding id="percentViableLabel">
+            {{percent_viabity_lbl}}:<span class="spacer_2"> {{percent_viability}} </span>
+          </md-content>
+          <!-- Insert cell concentration label -->
+          <md-content id="cell_conc" class="md-title selectable" layout-padding>{{cell_concentration_lbl}}</md-content>
+          <!-- Insert average cell viable count label -->
+          <md-content class="md-title selectable" ng-model="avgViableCellsLbl" layout-padding id="avgViableCellsLabel">
+            {{avg_cell_viable_lbl}}:<span class="spacer_3">{{avg_viable_cells}} </span>
+          </md-content>
+          <!-- Insert average cell viable count label -->
+          <md-content class="md-title selectable" ng-model="viableCellsLbl" layout-padding id="viableCellsLabel">
+            {{cell_viable_lbl}}:<span class="spacer_4"> {{viable_cells}} </span>
+          </md-content>
+          <!-- Insert total viable cell/sample label -->
+          <md-content class="md-title selectable" ng-model="totalviableCellsLbl" layout-padding id="totalviableCellsLabel">
+            {{tot_viable_cell_lbl}}:<span class="spacer_5"> {{total_viable_cell_sampl}} </span>
+          </md-content>
+          <!-- Insert volume of media needed label -->
+          <md-content id="media_vol" class="md-title selectable" layout-padding>{{media_volume_lbl}}</md-content>
+          <!-- Insert total viable cell/sample label -->
+          <md-content class="md-title selectable" ng-model="noOfCellsNeed" layout-padding id="noOfCellsNeedLabel">
+            {{num_cells_lbl}}
+            <input type="text" style="width:30%" onkeypress="return isNumberKey(event)" ng-model="needCells" ng-change="getCellsNeed(scope);">
+          </md-content>
+          <!-- Insert media vol label -->
+          <md-content id="vol_media" class="md-title selectable" layout-padding>{{media_volume_lbl}}:
+		  <span class="spacer_6"> {{media_volume}} </span>
+		  </md-content>
+		  </div> 
+       </div>
+      </md-sidenav>
+    </md-content>
+  </body>
 </html>
