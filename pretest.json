@@ -1,0 +1,46 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Live cells or tissues with intact -------- are not coloured",
+      "answers": {
+        "a": "vesicles",
+        "b": "nucleus",
+        "c": "chloroplast",
+        "d": "cell membrane"
+      },
+ 
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+
+    {
+      "question": "2. The total area of a hemocytometer chamber is -------",
+      "answers": {
+        "a": "1 mm2",
+        "b": "15 mm2",
+        "c": "16 mm2",
+        "d": "9 mm2"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+    
+    {
+      "question": "3. Trypan blue is commonly used in ---------- for cell counting",
+      "answers": {
+        "a": "microscopy",
+        "b": "analytical chemistry",
+        "c": "spectroscopy",
+        "d": "mass spectrometry"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}	 
+	 

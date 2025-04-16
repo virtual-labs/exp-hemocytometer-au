@@ -1,0 +1,49 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Hemocytometer was invented by ------",
+      "answers": {
+        "a": "Wallace H Coulter",
+        "b": "Bonner Sweet",
+        "c": "Louis Charles Malassez",
+        "d": "Claude Bernard"
+      },
+ 
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    	 
+    	 
+
+    {
+      "question": "2. The central square of hemocytometer is divided into-------- number of squares.",
+      "answers": {
+        "a": "20",
+        "b": "25",
+        "c": "30",
+        "d": "35"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+    
+    {
+      "question": "3. Find the percentage of viable cells, if there is a total of 150 cells including 120 unstained cells.",
+      "answers": {
+        "a": "80",
+        "b": "65",
+        "c": "70",
+        "d": "75"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}	 
+	 
+	 

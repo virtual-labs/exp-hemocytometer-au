@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="9.63px" height="13.58px" viewBox="0 0 9.63 13.58" enable-background="new 0 0 9.63 13.58" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			
+				<radialGradient id="SVGID_1_" cx="-268.0249" cy="-203.7168" r="0.89" gradientTransform="matrix(0.1758 -0.3129 1.2337 0.6931 303.5314 62.2528)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#484848"/>
+				<stop  offset="0.3216" style="stop-color:#1E1E1E"/>
+				<stop  offset="1" style="stop-color:#000000"/>
+			</radialGradient>
+			<polygon fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_1_)" points="7.31,5.59 6.43,6.03 6.42,6.01 2.56,4.12 
+				2.57,4.04 3.33,3.77 7.31,5.57 			"/>
+			
+				<radialGradient id="SVGID_2_" cx="-264.2251" cy="-192.4668" r="0.7775" gradientTransform="matrix(0.3577 0.0301 -0.2713 3.2208 48.7386 636.8077)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#484848"/>
+				<stop  offset="0.3216" style="stop-color:#1E1E1E"/>
+				<stop  offset="1" style="stop-color:#000000"/>
+			</radialGradient>
+			<polygon fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_2_)" points="7.31,5.59 6.63,11.81 5.75,12.27 6.37,6.56 
+				6.37,6.54 6.42,6.04 6.42,6.01 6.43,6.03 			"/>
+			<polygon fill-rule="evenodd" clip-rule="evenodd" points="5.75,12.27 1.95,10.32 2.56,4.12 6.42,6.01 6.42,6.04 6.37,6.54 
+				6.37,6.56 			"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#3B5047" points="6.18,6.55 5.79,6.78 5.76,6.78 2.65,5.33 2.25,5.17 
+				2.72,4.95 6.18,6.53 			"/>
+			
+				<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-271.1436" y1="-198.4971" x2="-259.7303" y2="-198.4971" gradientTransform="matrix(-0.0377 0.3569 -0.3558 -0.0487 -75.2466 95.7543)">
+				<stop  offset="0" style="stop-color:#516655"/>
+				<stop  offset="1" style="stop-color:#96AB9A"/>
+			</linearGradient>
+			<polygon fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_3_)" points="6.18,6.55 5.57,11.81 5.57,11.83 5.55,11.81 
+				5.4,11.72 4.99,11.11 5.77,6.8 5.79,6.8 5.76,6.78 5.79,6.78 			"/>
+			<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#5A704A" points="4.99,11.11 4.98,11.09 4.98,11.18 1.86,9.58 2.65,5.33 
+				5.76,6.78 5.79,6.8 5.77,6.8 			"/>
+			<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#4F5A56" points="5.55,11.81 1.43,9.8 2.25,5.17 2.65,5.33 1.86,9.58 
+				4.98,11.18 4.98,11.09 4.99,11.11 5.4,11.72 5.55,11.81 5.57,11.83 5.57,11.84 			"/>
+		</g>
+	</g>
+	<g>
+		
+			<radialGradient id="SVGID_4_" cx="-262.8252" cy="-201.2168" r="1.1" gradientTransform="matrix(0.3589 0 0 0.3589 101.2859 78.033)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#595959"/>
+			<stop  offset="1" style="stop-color:#000000"/>
+		</radialGradient>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_4_)" d="M6.59,6.04c-0.01,0-0.02-0.01-0.03-0.02
+			C6.55,6.01,6.55,6,6.55,5.98c0-0.01,0.01-0.02,0.02-0.03l0.7-0.38C7.28,5.57,7.29,5.57,7.3,5.57c0.01,0,0.02,0.01,0.03,0.02
+			C7.34,5.6,7.34,5.61,7.34,5.62c0,0.01-0.01,0.02-0.02,0.03l-0.7,0.38C6.61,6.04,6.6,6.04,6.59,6.04z"/>
+	</g>
+	<g>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#555555" d="M6.13,2.13H6.08c-0.03-0.07-0.07-0.15-0.1-0.25
+			c-0.13-0.17-0.27-0.25-0.4-0.25c-0.17,0-0.32,0.08-0.45,0.25c-0.07,0.13-0.12,0.27-0.15,0.4c-0.03,0.1-0.05,0.2-0.05,0.3
+			c0.03,0.13,0.07,0.27,0.1,0.4c0.03,0.1,0.07,0.2,0.1,0.3C5.26,3.42,5.38,3.5,5.47,3.53c0.03,0,0.07,0,0.1,0
+			c0.17,0,0.3-0.08,0.4-0.25c0.03-0.1,0.07-0.18,0.1-0.25c0-0.03,0.02-0.05,0.05-0.05c0.03-0.13,0.03-0.27,0-0.4
+			c0.03-0.17,0.03-0.3,0-0.4V2.13z M5.53,0.78h0.1c0,0.03,0,0.07,0,0.1v0.55c0.17,0.03,0.33,0.15,0.5,0.35
+			c0.03,0.07,0.07,0.13,0.1,0.2l0.25-0.25c0-0.03,0.02-0.05,0.05-0.05l0.05,0.05v0.05c0,0.03,0,0.07,0,0.1l-0.3,0.25
+			c0.03,0.13,0.05,0.28,0.05,0.45S6.31,2.9,6.28,3.03l0.3,0.6c0.03,0,0.03,0.02,0,0.05v0.05c-0.03,0.03-0.07,0.03-0.1,0H6.42
+			L6.17,3.28c-0.03,0.03-0.05,0.07-0.05,0.1C5.96,3.62,5.78,3.73,5.58,3.73v0.4c0,0.03-0.02,0.05-0.05,0.05
+			c0,0.03-0.02,0.05-0.05,0.05c-0.03,0-0.05-0.02-0.05-0.05c-0.03,0-0.05-0.02-0.05-0.05V3.68c-0.13-0.07-0.27-0.17-0.4-0.3
+			c-0.03-0.07-0.05-0.13-0.05-0.2l-0.2,0.2h-0.1c-0.03-0.03-0.05-0.07-0.05-0.1l0.3-0.3c-0.07-0.13-0.1-0.27-0.1-0.4
+			c0-0.1,0.02-0.18,0.05-0.25l-0.3-0.25L4.47,2.03c0-0.07,0.02-0.1,0.05-0.1c0-0.03,0.02-0.05,0.05-0.05S4.63,1.9,4.63,1.93l0.2,0.2
+			C4.89,2,4.94,1.88,4.97,1.78c0.13-0.2,0.3-0.32,0.5-0.35V0.88C5.47,0.85,5.49,0.82,5.53,0.78z"/>
+	</g>
+</g>
+</svg>
